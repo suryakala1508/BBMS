@@ -13,9 +13,11 @@ exports.register = async (req, res) => {
 
     res.status(201).json({ message: "Registered successfully" });
   } catch (err) {
-    res.status(500).json({ message: "Server error" });
+    console.log("Register error:", err);
+    res.status(500).json({ message: err.message });
   }
 };
+
 
 exports.login = async (req, res) => {
   const { email, password } = req.body;
