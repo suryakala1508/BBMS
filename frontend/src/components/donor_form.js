@@ -19,7 +19,7 @@ const DonorForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/donors/add', {
+      const res = await fetch('https://bbms-production-62ee.up.railway.app/api/donors/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

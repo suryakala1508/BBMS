@@ -18,7 +18,7 @@ function Home() {
     if (!query) return alert('Please enter a blood type');
 
     try {
-      const res = await fetch(`http://localhost:5000/api/donors/search?q=${encodeURIComponent(query)}`);
+      const res = await fetch(`https://bbms-production-62ee.up.railway.app/api/donors/search?q=${encodeURIComponent(query)}`);
       const data = await res.json();
 
       if (res.ok && Array.isArray(data) && data.length > 0) {
