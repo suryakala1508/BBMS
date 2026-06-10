@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await fetch('https://bbms-production-62ee.up.railway.app/api/auth/login', {
+      const res = await fetch('https://bbms-4j6u.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
