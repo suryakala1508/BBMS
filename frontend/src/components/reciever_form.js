@@ -19,7 +19,7 @@ const ReceiverForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/receivers/add', {
+      const res = await fetch('https://bbms-4j6u.onrender.com/api/receivers/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
