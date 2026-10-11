@@ -1,26 +1,26 @@
-# ChatSphere: Real-Time Chat Application
+# BBMS: Blood Bank Management System
 
-A full-stack real-time messaging app. The React interface updates instantly through Socket.io WebSockets, with private chats, group chats, and live online/offline status.
+A MERN-stack web app for managing blood donors and live blood inventory, with separate role-based access for donors and admins.
+
+**Live Demo:** [https://astonishing-treacle-d02935.netlify.app/](https://astonishing-treacle-d02935.netlify.app/)
 
 
 ## Features
 
-- **Private messaging** and **group chats**
-- **Instant delivery:** messages arrive without a page refresh through Socket.io events
-- **Online/offline presence** for every user
-- **Persistent history:** messages stored in MongoDB
-- **Media sharing:** send images and use an emoji picker
-- **Voice-call integration**
+- **Role-based access control:** separate experiences for donors and admins
+- **Donor management:** handles 500+ donor records
+- **Real-time inventory:** blood stock tracking powered by MongoDB aggregation pipelines
 - **Secure auth:** JWT authentication
-- **Connection tracking:** the Node.js backend keeps concurrent socket connections in an in-memory Map
+- **REST API:** clean, structured endpoints consumed by the React frontend
+- **Faster loading:** client-side caching and optimized React rendering (about 35% faster page load)
 
 ## Tech Stack
 
 **Frontend:** React.js
 **Backend:** Node.js, Express.js
-**Real-time:** Socket.io (WebSockets)
-**Database:** MongoDB
-**Auth:** JWT
+**Database:** MongoDB (Mongoose)
+**Auth:** JWT, role-based access control
+**Hosting:** Netlify (frontend)
 
 ## Getting Started
 
@@ -30,8 +30,8 @@ A full-stack real-time messaging app. The React interface updates instantly thro
 
 ### 1. Clone
 ```bash
-git clone https://github.com/suryakala1508/ChatSphere.git
-cd ChatSphere
+git clone https://github.com/suryakala1508/BBMS.git
+cd BBMS
 ```
 
 ### 2. Backend
@@ -50,12 +50,11 @@ npm start
 ```
 
 
-
 ## What I Built / Challenges
 
-- Designed the Socket.io event flow so messages, typing and presence updates reach the right users in real time
-- Tracked which users are online by mapping user IDs to active socket connections on the server
-- Kept chat history in MongoDB so conversations survive refreshes and reconnects
+- Designed role-based routes so donors and admins only see and change what they should
+- Used MongoDB aggregation pipelines to compute inventory totals instead of calculating them on the client
+- Reduced load time by caching repeated API responses on the client
 
 ## Author
 
